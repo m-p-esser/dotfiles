@@ -1,0 +1,9 @@
+<application>
+  <component name="GraziConfig">
+    <option name="checkingContext">
+      <CheckingContext>
+        <option name="isCheckInCommentsEnabled" value="false" />
+      </CheckingContext>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,104 @@
+<keymap version="1" name="My Keybindings" parent="Default for GNOME">
+  <action id="$Copy">
+    <keyboard-shortcut first-keystroke="shift ctrl c" />
+  </action>
+  <action id="$Cut">
+    <keyboard-shortcut first-keystroke="shift ctrl x" />
+  </action>
+  <action id="$Paste">
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
+  </action>
+  <action id="ActivateBookmarksToolWindow" />
+  <action id="ActivateCommitToolWindow" />
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="alt 5" />
+  </action>
+  <action id="ActivateDebugToolWindow" />
+  <action id="ActivateFindToolWindow" />
+  <action id="ActivateProblemsViewToolWindow" />
+  <action id="ActivateServicesToolWindow">
+    <keyboard-shortcut first-keystroke="alt 2" />
+  </action>
+  <action id="ActivateStructureToolWindow" />
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt 3" />
+  </action>
+  <action id="ActivateVersionControlToolWindow" />
+  <action id="ChangesView.ToggleCommitUi" />
+  <action id="CheckinProject" />
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="alt d" />
+  </action>
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="shift ctrl number_sign" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="ctrl number_sign" />
+  </action>
+  <action id="Console.TableResult.CopyAggregatorResult" />
+  <action id="Console.TableResult.DeleteRows" />
+  <action id="CopyAbsolutePath" />
+  <action id="CopyPaths" />
+  <action id="DatabaseView.CopyDdlAction">
+    <keyboard-shortcut first-keystroke="shift ctrl alt g" />
+  </action>
+  <action id="Editor Copy">
+    <keyboard-shortcut first-keystroke="shift ctrl c" />
+  </action>
+  <action id="Editor Cut">
+    <keyboard-shortcut first-keystroke="shift ctrl x" />
+  </action>
+  <action id="Editor Paste">
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
+  </action>
+  <action id="EditorDeleteLine" />
+  <action id="EditorLookupDown" />
+  <action id="EditorLookupUp" />
+  <action id="EditorScrollDown" />
+  <action id="EditorScrollUp" />
+  <action id="ExpressionTypeInfo" />
+  <action id="FindPrevious">
+    <keyboard-shortcut first-keystroke="shift f3" />
+  </action>
+  <action id="Git.Commit.Stage" />
+  <action id="Github.PullRequest.Diff.Comment.Create" />
+  <action id="GotoAction">
+    <keyboard-shortcut first-keystroke="shift ctrl k" />
+  </action>
+  <action id="MethodOverloadSwitchDown" />
+  <action id="MethodOverloadSwitchUp" />
+  <action id="NotebookMoveCellDownAction">
+    <keyboard-shortcut first-keystroke="ctrl down" />
+  </action>
+  <action id="NotebookMoveCellUpAction">
+    <keyboard-shortcut first-keystroke="ctrl up" />
+  </action>
+  <action id="NotebookSelectCellAboveAction" />
+  <action id="NotebookSelectCellBelowAction" />
+  <action id="OverrideMethods" />
+  <action id="RemoteHostView.CopyPaths" />
+  <action id="SearchEverywhere">
+    <keyboard-shortcut first-keystroke="ctrl o" />
+  </action>
+  <action id="SearchEverywhere.NavigateToNextGroup">
+    <keyboard-shortcut first-keystroke="page_down" />
+  </action>
+  <action id="SearchEverywhere.NavigateToPrevGroup">
+    <keyboard-shortcut first-keystroke="page_up" />
+  </action>
+  <action id="Terminal.CopySelectedText">
+    <keyboard-shortcut first-keystroke="ctrl c" />
+    <keyboard-shortcut first-keystroke="ctrl insert" />
+  </action>
+  <action id="Terminal.SelectBlockAbove">
+    <keyboard-shortcut first-keystroke="up" />
+  </action>
+  <action id="Terminal.SelectLastBlock" />
+  <action id="Terminal.SelectPrompt" />
+  <action id="TouchBar">
+    <keyboard-shortcut first-keystroke="shift ctrl l" />
+  </action>
+  <action id="Vcs.Push" />
+  <action id="WelcomeScreen.CopyProjectPath" />
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleCodeSpanAction" />
+</keymap>

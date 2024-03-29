@@ -1,0 +1,8 @@
+<application>
+  <component name="LocalDatabaseDriverManager" version="201">
+    <driver id="snowflake">
+      <artifact id="Snowflake" name="Snowflake" use="true" version="3.14.4" />
+      <artifact id="jna-platform" name="jna-platform" use="true" version="5.8.0" />
+    </driver>
+  </component>
+</application>
