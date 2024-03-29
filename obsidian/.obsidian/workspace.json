@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "1471ba4d76b1dd1f",
+    "type": "split",
+    "children": [
+      {
+        "id": "378403047a4e282e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f03664d167d444bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "000 Inbox/Bash MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "01af469c823e201e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8c6c23b2a8c267b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "595b467381e590f4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a61fda59037c39a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6cc3ce9344925110",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 355.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "caeda26533de9ff0",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb13e259f6cff81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21ca2c621a0ba03d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "000 Inbox/Bash MOC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bde560b552ad82f6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "000 Inbox/Bash MOC.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7617a9efe1041926",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "1ea83cd43a189573",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "000 Inbox/Bash MOC.md"
+              }
+            }
+          },
+          {
+            "id": "a4023e93506bcd82",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false
+    }
+  },
+  "active": "f03664d167d444bf",
+  "lastOpenFiles": [
+    "000 Periodic/2024-03-29.md",
+    "Heptabase Whiteboards.md",
+    "000 Inbox/Dimensional Modeling.canvas",
+    "000 Inbox/⚙ Technical architecture Design.md",
+    "000 Inbox/Dimensional Modeling.md",
+    "000 Inbox/Build ELT & ETL process.md",
+    "000 Inbox/Data Mart.md",
+    "000 Inbox/Conceptual Data Model 1.md",
+    "000 Inbox/Dimensional Modeling 1.md",
+    "000 Inbox/Stakeholder.md",
+    "000 Inbox/Stakeholder 1.md",
+    "000 Inbox/Optimizing Queries.md",
+    "000 Inbox/Sections! See the big picture of your learning topics.md",
+    "000 Inbox/PR - Github Public Event Streaming.md",
+    "000 Inbox/Optimizing Queries 1.md",
+    "000 Inbox/Nondescriptive Link.md",
+    "000 Inbox/Non-functional Requirement.md",
+    "000 Inbox/No-History Reference Table.md",
+    "000 Inbox/Neumann Architecture.md",
+    "000 Inbox/Nested Whiteboard! Organize learning topics with hierarchies and reusable cards.md",
+    "000 Inbox/Multi-active states of parent entity.md",
+    "000 Inbox/Multi-Active Satellite.md",
+    "000 Inbox/Modeling Layer.md",
+    "000 Inbox/Modeling Layer 1.md",
+    "000 Inbox/Lagerung (Lekkerland).md",
+    "000 Inbox/KROKUS.md",
+    "000 Inbox/Kostümideen.md",
+    "200 Areas of Responsibility/Data Engineering",
+    "500 Meta/Obsidian/Files/Zero-key-assets/image 138.png",
+    "500 Meta/Obsidian/Files/Zero-key-assets",
+    "500 Meta/Obsidian/Files/Wireframe-assets/Pasted image 20221210160431.png",
+    "500 Meta/Obsidian/Files/Wireframe-assets",
+    "500 Meta/Obsidian/Files/Value Band Dimension-assets/Pasted image 20221230193806.png",
+    "500 Meta/Obsidian/Files/Value Band Dimension-assets",
+    "500 Meta/Obsidian/Files/Using Effectivity or Status Tracking satellite to track sequence key movement-assets/image 154.png",
+    "500 Meta/Obsidian/Files/Using Effectivity or Status Tracking satellite to track sequence key movement-assets",
+    "500 Meta/Obsidian/Files/Useful Diagrams-assets/image 199.png",
+    "500 Meta/Obsidian/Files/Useful Diagrams-assets",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 172220.jpeg",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 171550.jpeg",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 171540.jpeg",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240202 163520.jpeg",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240202 163437.jpeg",
+    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets",
+    "500 Meta/Obsidian/Files/Types of tests in Data Vault-assets",
+    "500 Meta/Obsidian/Files/Transaction Fact Table-assets",
+    "500 Meta/Obsidian/Files/Time of Day Dimension-assets"
+  ]
+}

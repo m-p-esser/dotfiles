@@ -1,0 +1,13 @@
+{
+  "vimMode": true,
+  "spellcheck": false,
+  "showInlineTitle": false,
+  "focusNewTab": true,
+  "propertiesInDocument": "source",
+  "livePreview": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "000 Inbox",
+  "attachmentFolderPath": "500 Meta/Obsidian/Files",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
+}
