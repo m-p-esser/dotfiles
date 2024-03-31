@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "378403047a4e282e",
+        "id": "adc7f16ff36f3e2a",
         "type": "tabs",
         "children": [
           {
-            "id": "f03664d167d444bf",
+            "id": "78a0edfb657b6796",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Inbox/Bash MOC.md",
+                "file": "000 Periodic/2024-03-31.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#articles snowflake ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "000 Inbox/Bash MOC.md",
+                "file": "000 Periodic/2024-03-31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "000 Inbox/Bash MOC.md",
+                "file": "000 Periodic/2024-03-31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "000 Inbox/Bash MOC.md"
+                "file": "000 Periodic/2024-03-31.md"
               }
             }
           },
@@ -138,7 +138,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -160,10 +161,26 @@
       "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false
     }
   },
-  "active": "f03664d167d444bf",
+  "active": "78a0edfb657b6796",
   "lastOpenFiles": [
-    "000 Periodic/2024-03-29.md",
+    "500 Meta/Zotero/SQL cookbook - query solutions and techniques for database developers.md",
+    "500 Meta/Zotero/Snowflake - the definitive guide - architecting, designing, and deploying on the Snowflake Data Cloud.md",
+    "500 Meta/Zotero/The Data Warehouse Toolkit - the definitive guide to Dimensional Modeling.md",
+    "500 Meta/Obsidian/Templates/Book Note.md",
+    "000 Periodic/2024-03-31.md",
+    "500 Meta/Readwise/Articles/First Look at the Official Readwise Obsidian Plugin - Ben Newton.md",
+    "500 Meta/Obsidian/Templates/New Note.md",
+    "500 Meta/Obsidian/Templates/Daily Note.md",
+    "500 Meta/Zotero/avilaSnowflakeDefinitiveGuide.md",
+    "500 Meta/Zotero",
+    "000 Inbox/The Data Warehouse Toolkit 1.md",
+    "000 Inbox/The Data Warehouse Toolkit 3.md",
+    "Kimball Notes.md",
+    "000 Periodic/2024-03-30.md",
+    "000 Inbox/Bash MOC.md",
     "Heptabase Whiteboards.md",
+    "500 Meta/Readwise/Articles/Unlocking DBT - Cameron Cyr & Dustin Dorsey.md",
+    "000 Periodic/2024-03-29.md",
     "000 Inbox/Dimensional Modeling.canvas",
     "000 Inbox/⚙ Technical architecture Design.md",
     "000 Inbox/Dimensional Modeling.md",
@@ -174,21 +191,6 @@
     "000 Inbox/Stakeholder.md",
     "000 Inbox/Stakeholder 1.md",
     "000 Inbox/Optimizing Queries.md",
-    "000 Inbox/Sections! See the big picture of your learning topics.md",
-    "000 Inbox/PR - Github Public Event Streaming.md",
-    "000 Inbox/Optimizing Queries 1.md",
-    "000 Inbox/Nondescriptive Link.md",
-    "000 Inbox/Non-functional Requirement.md",
-    "000 Inbox/No-History Reference Table.md",
-    "000 Inbox/Neumann Architecture.md",
-    "000 Inbox/Nested Whiteboard! Organize learning topics with hierarchies and reusable cards.md",
-    "000 Inbox/Multi-active states of parent entity.md",
-    "000 Inbox/Multi-Active Satellite.md",
-    "000 Inbox/Modeling Layer.md",
-    "000 Inbox/Modeling Layer 1.md",
-    "000 Inbox/Lagerung (Lekkerland).md",
-    "000 Inbox/KROKUS.md",
-    "000 Inbox/Kostümideen.md",
     "200 Areas of Responsibility/Data Engineering",
     "500 Meta/Obsidian/Files/Zero-key-assets/image 138.png",
     "500 Meta/Obsidian/Files/Zero-key-assets",
@@ -207,7 +209,6 @@
     "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240202 163437.jpeg",
     "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets",
     "500 Meta/Obsidian/Files/Types of tests in Data Vault-assets",
-    "500 Meta/Obsidian/Files/Transaction Fact Table-assets",
-    "500 Meta/Obsidian/Files/Time of Day Dimension-assets"
+    "500 Meta/Obsidian/Files/Transaction Fact Table-assets"
   ]
 }
