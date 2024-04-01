@@ -1,0 +1,243 @@
+{
+    "name": "parquet-viewer",
+    "displayName": "parquet-viewer",
+    "description": "Views Apache Parquet files as JSON",
+    "publisher": "dvirtz",
+    "icon": "images/ico128.png",
+    "homepage": "https://github.com/dvirtz/vscode-parquet-viewer",
+    "bugs": {
+        "url": "https://github.com/dvirtz/vscode-parquet-viewer/issues",
+        "email": "smcbreen@microsoft.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dvirtz/vscode-parquet-viewer.git"
+    },
+    "author": {
+        "name": "Dvir Yitzchaki",
+        "email": "dvirt@gmail.com",
+        "url": "https://github.com/dvirtz"
+    },
+    "license": "MIT",
+    "version": "2.7.0",
+    "workspaces": [
+        "./packages/*"
+    ],
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "parquet",
+        "spark",
+        "viewer"
+    ],
+    "activationEvents": [
+        "onCustomEditor:parquetViewer.parquetViewer"
+    ],
+    "main": "./dist/src/extension",
+    "contributes": {
+        "configuration": {
+            "title": "parquet-viewer",
+            "properties": {
+                "parquet-viewer.parquetToolsPath": {
+                    "type": "string",
+                    "default": "parquet-tools",
+                    "description": "Path to parquet-tools executable or jar"
+                },
+                "parquet-viewer.logPanel": {
+                    "description": "Write diagnostic logs to an output panel",
+                    "type": "boolean",
+                    "markdownDeprecationMessage": "**Deprecated**: Please use `#parquet-viewer.logging.panel#` instead."
+                },
+                "parquet-viewer.logFolder": {
+                    "description": "Write diagnostic logs under the given directory",
+                    "type": "string",
+                    "markdownDeprecationMessage": "**Deprecated**: Please use `#parquet-viewer.logging.folder#` instead."
+                },
+                "parquet-viewer.logLevel": {
+                    "description": "Log level",
+                    "type": "string",
+                    "enum": [
+                        "off",
+                        "fatal",
+                        "error",
+                        "warn",
+                        "info",
+                        "debug",
+                        "trace"
+                    ],
+                    "default": "info",
+                    "markdownDeprecationMessage": "**Deprecated**: Please use `#parquet-viewer.logging.level#` instead."
+                },
+                "parquet-viewer.useParquetTools": {
+                    "description": "Use legacy parquet-tools application for reading parquet files",
+                    "type": "boolean",
+                    "markdownDeprecationMessage": "Use `#parquet-viewer.backend#` configuration instead"
+                },
+                "parquet-viewer.logging.panel": {
+                    "description": "Write diagnostic logs to an output panel",
+                    "type": "boolean"
+                },
+                "parquet-viewer.logging.folder": {
+                    "description": "Write diagnostic logs under the given directory",
+                    "type": "string"
+                },
+                "parquet-viewer.logging.level": {
+                    "description": "Log level",
+                    "type": "string",
+                    "enum": [
+                        "off",
+                        "fatal",
+                        "error",
+                        "warn",
+                        "info",
+                        "debug",
+                        "trace"
+                    ],
+                    "default": "info"
+                },
+                "parquet-viewer.jsonSpace": {
+                    "markdownDescription": "JSON indentation space, passed to `JSON.stringify` as is, see [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#parameters) for details. Doesn't apply when `#parquet-viewer.backend#` is `parquet-tools`.",
+                    "type": [
+                        "string",
+                        "number"
+                    ],
+                    "default": 0,
+                    "minimum": 0,
+                    "maximum": 10,
+                    "maxLength": 10,
+                    "markdownDeprecationMessage": "**Deprecated**: Please use `#parquet-viewer.json.space#` instead."
+                },
+                "parquet-viewer.backend": {
+                    "markdownDescription": "Which backend to use for reading the files",
+                    "type": "string",
+                    "enum": [
+                        "parquet-tools",
+                        "parquets",
+                        "arrow",
+                        "parquet-wasm"
+                    ],
+                    "default": "arrow"
+                },
+                "parquet-viewer.json.space": {
+                    "markdownDescription": "JSON indentation space, passed to `JSON.stringify` as is, see [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#parameters) for details. Doesn't apply when `#parquet-viewer.backend#` is `parquet-tools`.",
+                    "type": [
+                        "string",
+                        "number"
+                    ],
+                    "default": 0,
+                    "minimum": 0,
+                    "maximum": 10,
+                    "maxLength": 10
+                },
+                "parquet-viewer.json.asArray": {
+                    "markdownDescription": "Format output JSON as one big array",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        },
+        "customEditors": [
+            {
+                "viewType": "parquetViewer.parquetViewer",
+                "displayName": "Parquet Viewer",
+                "selector": [
+                    {
+                        "filenamePattern": "*.parquet"
+                    }
+                ]
+            }
+        ]
+    },
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": "limited",
+            "restrictedConfigurations": [
+                "parquet-viewer.useParquetTools",
+                "parquet-viewer.parquetToolsPath"
+            ]
+        }
+    },
+    "__metadata": {
+        "id": "b0d61cc0-c99f-47d2-88eb-6b26dc2a5b1e",
+        "publisherDisplayName": "Dvir Yitzchaki",
+        "publisherId": "5c0bfd53-c85a-4ae0-9171-da96c2ed64f3",
+        "isPreReleaseVersion": false
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc --build",
+        "build": "tsc --build",
+        "test": "npm run unit && npm run integration",
+        "preintegration": "npm run build",
+        "integration": "node --enable-source-maps ./dist/test/integration/runTests.js",
+        "unit": "jest --config test/unit/jest.config.ts",
+        "spellcheck": "cspell **/*.ts README.md",
+        "lint": "eslint --max-warnings=0 \"**/*.ts\"",
+        "prepare": "husky install",
+        "clean": "rimraf dist .vscode-test",
+        "build-apple-m1": "ts-node scripts/build-apple-m1.ts"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
+        "@jest/globals": "^29.6.2",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@types/glob": "^7.1.3",
+        "@types/node": "^12.20.11",
+        "@types/unzipper": "^0.10.8",
+        "@types/vscode": "^1.46.0",
+        "@typescript-eslint/eslint-plugin": "^5.27.1",
+        "@typescript-eslint/parser": "^5.27.1",
+        "@vscode/test-electron": "^2.3.5",
+        "cli-wd": "^0.6.0",
+        "cmake-js": "^7.2.1",
+        "copyfiles": "^2.4.1",
+        "cspell": "^5.11.0",
+        "eslint": "^8.17.0",
+        "glob-promise": "^4.2.0",
+        "husky": "^8.0.1",
+        "jest": "^29.6.2",
+        "jest-haste-map": "^29.6.2",
+        "rimraf": "^5.0.1",
+        "semantic-release": "^21.0.7",
+        "semantic-release-vsce": "^5.0.17",
+        "tempy": "^1.0.1",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.0.5",
+        "unzipper": "^0.10.14"
+    },
+    "dependencies": {
+        "@async-generators/to-array": "^0.1.0",
+        "@dvirtz/parquets": "^0.11.6",
+        "@vscode-logging/logger": "^1.2.3",
+        "@vscode-logging/wrapper": "^1.0.1",
+        "apache-arrow": "^15.0.0",
+        "color-string": "^1.6.0",
+        "parquet-reader": "file:packages/parquet-reader",
+        "parquet-wasm": "^0.5.0"
+    },
+    "overrides": {
+        "kexec": "meteor/node-kexec#update-for-node-12"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "body-max-line-length": [
+                2,
+                "always",
+                200
+            ],
+            "footer-max-line-length": [
+                0,
+                "always"
+            ]
+        }
+    }
+}

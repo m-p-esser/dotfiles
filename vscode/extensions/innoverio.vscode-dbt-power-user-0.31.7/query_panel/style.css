@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+button {
+  cursor: pointer;
+}
+
+.isVisible {
+  display: block;
+}
+
+.isHidden {
+  display: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #323232 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.clipboard-image {
+  margin: 0px;
+  padding: 0px;
+}
+
+.error-title {
+  color: crimson;
+}
+
+.help-body {
+  margin-left: 35px;
+}
+
+#spinner {
+  display: block;
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  margin-top: 25px;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#panel-manager {
+  height: 100vh;
+}
+
+perspective-export-menu {
+  display: none;
+}
+
+.psp-align-left {
+  border-left: solid 1px var(--inactive--border-color, #8b868045);
+}
+
+.psp-align-right {
+  border-left: solid 1px var(--inactive--border-color, #8b868045);
+}
+
+.psp-header-leaf:first-child {
+  border-left-color: transparent;
+}
+
+.tabulator-tableholder {
+  display: inline-block;
+}
+
+td,
+th {
+  user-select: text;
+}
+
+.tooltip-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-container:hover .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  color: #082247;
+  border-radius: 4px;
+  white-space: nowrap;
+  background: #ffce73;
+}
+
+.tooltip-text-top {
+  bottom: 125%;
+}
+
+.tooltip-text-bottom {
+  top: 125%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}

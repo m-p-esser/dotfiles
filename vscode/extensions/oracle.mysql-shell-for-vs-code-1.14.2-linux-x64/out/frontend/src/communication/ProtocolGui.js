@@ -1,0 +1,120 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.multiResultAPIs = exports.ShellAPIGui = void 0;
+var ShellAPIGui;
+(function (ShellAPIGui) {
+    ShellAPIGui["GuiClusterIsGuiModuleBackend"] = "gui.cluster.is_gui_module_backend";
+    ShellAPIGui["GuiClusterGetGuiModuleDisplayInfo"] = "gui.cluster.get_gui_module_display_info";
+    ShellAPIGui["GuiCoreSetLogLevel"] = "gui.core.set_log_level";
+    ShellAPIGui["GuiCoreGetLogLevel"] = "gui.core.get_log_level";
+    ShellAPIGui["GuiCoreListFiles"] = "gui.core.list_files";
+    ShellAPIGui["GuiCoreCreateFile"] = "gui.core.create_file";
+    ShellAPIGui["GuiCoreValidatePath"] = "gui.core.validate_path";
+    ShellAPIGui["GuiCoreGetBackendInformation"] = "gui.core.get_backend_information";
+    ShellAPIGui["GuiCoreIsShellWebCertificateInstalled"] = "gui.core.is_shell_web_certificate_installed";
+    ShellAPIGui["GuiCoreInstallShellWebCertificate"] = "gui.core.install_shell_web_certificate";
+    ShellAPIGui["GuiCoreRemoveShellWebCertificate"] = "gui.core.remove_shell_web_certificate";
+    ShellAPIGui["GuiDbconnectionsAddDbConnection"] = "gui.dbconnections.add_db_connection";
+    ShellAPIGui["GuiDbconnectionsUpdateDbConnection"] = "gui.dbconnections.update_db_connection";
+    ShellAPIGui["GuiDbconnectionsRemoveDbConnection"] = "gui.dbconnections.remove_db_connection";
+    ShellAPIGui["GuiDbconnectionsListDbConnections"] = "gui.dbconnections.list_db_connections";
+    ShellAPIGui["GuiDbconnectionsGetDbConnection"] = "gui.dbconnections.get_db_connection";
+    ShellAPIGui["GuiDbconnectionsGetDbTypes"] = "gui.dbconnections.get_db_types";
+    ShellAPIGui["GuiDbconnectionsSetCredential"] = "gui.dbconnections.set_credential";
+    ShellAPIGui["GuiDbconnectionsDeleteCredential"] = "gui.dbconnections.delete_credential";
+    ShellAPIGui["GuiDbconnectionsListCredentials"] = "gui.dbconnections.list_credentials";
+    ShellAPIGui["GuiDbconnectionsTestConnection"] = "gui.dbconnections.test_connection";
+    ShellAPIGui["GuiDbconnectionsMoveConnection"] = "gui.dbconnections.move_connection";
+    ShellAPIGui["GuiMdsIsGuiModuleBackend"] = "gui.mds.is_gui_module_backend";
+    ShellAPIGui["GuiMdsGetGuiModuleDisplayInfo"] = "gui.mds.get_gui_module_display_info";
+    ShellAPIGui["GuiModelerIsGuiModuleBackend"] = "gui.modeler.is_gui_module_backend";
+    ShellAPIGui["GuiModelerGetGuiModuleDisplayInfo"] = "gui.modeler.get_gui_module_display_info";
+    ShellAPIGui["GuiShellIsGuiModuleBackend"] = "gui.shell.is_gui_module_backend";
+    ShellAPIGui["GuiShellGetGuiModuleDisplayInfo"] = "gui.shell.get_gui_module_display_info";
+    ShellAPIGui["GuiShellStartSession"] = "gui.shell.start_session";
+    ShellAPIGui["GuiShellCloseSession"] = "gui.shell.close_session";
+    ShellAPIGui["GuiShellExecute"] = "gui.shell.execute";
+    ShellAPIGui["GuiShellComplete"] = "gui.shell.complete";
+    ShellAPIGui["GuiShellKillTask"] = "gui.shell.kill_task";
+    ShellAPIGui["GuiDbGetObjectsTypes"] = "gui.db.get_objects_types";
+    ShellAPIGui["GuiDbGetCatalogObjectNames"] = "gui.db.get_catalog_object_names";
+    ShellAPIGui["GuiDbGetSchemaObjectNames"] = "gui.db.get_schema_object_names";
+    ShellAPIGui["GuiDbGetTableObjectNames"] = "gui.db.get_table_object_names";
+    ShellAPIGui["GuiDbGetCatalogObject"] = "gui.db.get_catalog_object";
+    ShellAPIGui["GuiDbGetSchemaObject"] = "gui.db.get_schema_object";
+    ShellAPIGui["GuiDbGetTableObject"] = "gui.db.get_table_object";
+    ShellAPIGui["GuiDbStartSession"] = "gui.db.start_session";
+    ShellAPIGui["GuiDbCloseSession"] = "gui.db.close_session";
+    ShellAPIGui["GuiDbReconnect"] = "gui.db.reconnect";
+    ShellAPIGui["GuiSqleditorIsGuiModuleBackend"] = "gui.sqleditor.is_gui_module_backend";
+    ShellAPIGui["GuiSqleditorGetGuiModuleDisplayInfo"] = "gui.sqleditor.get_gui_module_display_info";
+    ShellAPIGui["GuiSqleditorStartSession"] = "gui.sqleditor.start_session";
+    ShellAPIGui["GuiSqleditorCloseSession"] = "gui.sqleditor.close_session";
+    ShellAPIGui["GuiSqleditorOpenConnection"] = "gui.sqleditor.open_connection";
+    ShellAPIGui["GuiSqleditorReconnect"] = "gui.sqleditor.reconnect";
+    ShellAPIGui["GuiSqleditorExecute"] = "gui.sqleditor.execute";
+    ShellAPIGui["GuiSqleditorKillQuery"] = "gui.sqleditor.kill_query";
+    ShellAPIGui["GuiSqleditorGetCurrentSchema"] = "gui.sqleditor.get_current_schema";
+    ShellAPIGui["GuiSqleditorSetCurrentSchema"] = "gui.sqleditor.set_current_schema";
+    ShellAPIGui["GuiSqleditorGetAutoCommit"] = "gui.sqleditor.get_auto_commit";
+    ShellAPIGui["GuiSqleditorSetAutoCommit"] = "gui.sqleditor.set_auto_commit";
+    ShellAPIGui["GuiUsersCreateUser"] = "gui.users.create_user";
+    ShellAPIGui["GuiUsersSetAllowedHosts"] = "gui.users.set_allowed_hosts";
+    ShellAPIGui["GuiUsersDeleteUser"] = "gui.users.delete_user";
+    ShellAPIGui["GuiUsersGrantRole"] = "gui.users.grant_role";
+    ShellAPIGui["GuiUsersGetUserId"] = "gui.users.get_user_id";
+    ShellAPIGui["GuiUsersListUsers"] = "gui.users.list_users";
+    ShellAPIGui["GuiUsersListUserRoles"] = "gui.users.list_user_roles";
+    ShellAPIGui["GuiUsersListRoles"] = "gui.users.list_roles";
+    ShellAPIGui["GuiUsersListRolePrivileges"] = "gui.users.list_role_privileges";
+    ShellAPIGui["GuiUsersListUserPrivileges"] = "gui.users.list_user_privileges";
+    ShellAPIGui["GuiUsersGetGuiModuleList"] = "gui.users.get_gui_module_list";
+    ShellAPIGui["GuiUsersListProfiles"] = "gui.users.list_profiles";
+    ShellAPIGui["GuiUsersGetProfile"] = "gui.users.get_profile";
+    ShellAPIGui["GuiUsersUpdateProfile"] = "gui.users.update_profile";
+    ShellAPIGui["GuiUsersAddProfile"] = "gui.users.add_profile";
+    ShellAPIGui["GuiUsersDeleteProfile"] = "gui.users.delete_profile";
+    ShellAPIGui["GuiUsersGetDefaultProfile"] = "gui.users.get_default_profile";
+    ShellAPIGui["GuiUsersSetDefaultProfile"] = "gui.users.set_default_profile";
+    ShellAPIGui["GuiUsersSetCurrentProfile"] = "gui.users.set_current_profile";
+    ShellAPIGui["GuiUsersListUserGroups"] = "gui.users.list_user_groups";
+    ShellAPIGui["GuiUsersCreateUserGroup"] = "gui.users.create_user_group";
+    ShellAPIGui["GuiUsersAddUserToGroup"] = "gui.users.add_user_to_group";
+    ShellAPIGui["GuiUsersRemoveUserFromGroup"] = "gui.users.remove_user_from_group";
+    ShellAPIGui["GuiUsersUpdateUserGroup"] = "gui.users.update_user_group";
+    ShellAPIGui["GuiUsersRemoveUserGroup"] = "gui.users.remove_user_group";
+    ShellAPIGui["GuiDebuggerIsGuiModuleBackend"] = "gui.debugger.is_gui_module_backend";
+    ShellAPIGui["GuiDebuggerGetGuiModuleDisplayInfo"] = "gui.debugger.get_gui_module_display_info";
+    ShellAPIGui["GuiDebuggerGetScripts"] = "gui.debugger.get_scripts";
+    ShellAPIGui["GuiDebuggerGetScriptContent"] = "gui.debugger.get_script_content";
+    ShellAPIGui["GuiModulesAddData"] = "gui.modules.add_data";
+    ShellAPIGui["GuiModulesListData"] = "gui.modules.list_data";
+    ShellAPIGui["GuiModulesGetDataContent"] = "gui.modules.get_data_content";
+    ShellAPIGui["GuiModulesShareDataToUserGroup"] = "gui.modules.share_data_to_user_group";
+    ShellAPIGui["GuiModulesAddDataToProfile"] = "gui.modules.add_data_to_profile";
+    ShellAPIGui["GuiModulesUpdateData"] = "gui.modules.update_data";
+    ShellAPIGui["GuiModulesDeleteData"] = "gui.modules.delete_data";
+    ShellAPIGui["GuiModulesListDataCategories"] = "gui.modules.list_data_categories";
+    ShellAPIGui["GuiModulesAddDataCategory"] = "gui.modules.add_data_category";
+    ShellAPIGui["GuiModulesRemoveDataCategory"] = "gui.modules.remove_data_category";
+    ShellAPIGui["GuiModulesGetDataCategoryId"] = "gui.modules.get_data_category_id";
+    ShellAPIGui["GuiModulesCreateProfileDataTree"] = "gui.modules.create_profile_data_tree";
+    ShellAPIGui["GuiModulesGetProfileDataTree"] = "gui.modules.get_profile_data_tree";
+    ShellAPIGui["GuiModulesCreateUserGroupDataTree"] = "gui.modules.create_user_group_data_tree";
+    ShellAPIGui["GuiModulesGetUserGroupDataTree"] = "gui.modules.get_user_group_data_tree";
+    ShellAPIGui["GuiModulesGetProfileTreeIdentifiers"] = "gui.modules.get_profile_tree_identifiers";
+    ShellAPIGui["GuiModulesMoveData"] = "gui.modules.move_data";
+    ShellAPIGui["GuiInfo"] = "gui.info";
+    ShellAPIGui["GuiVersion"] = "gui.version";
+})(ShellAPIGui = exports.ShellAPIGui || (exports.ShellAPIGui = {}));
+exports.multiResultAPIs = [
+    ShellAPIGui.GuiCoreListFiles,
+    ShellAPIGui.GuiDbGetSchemaObjectNames,
+    ShellAPIGui.GuiDbconnectionsListDbConnections,
+    ShellAPIGui.GuiModulesGetProfileDataTree,
+    ShellAPIGui.GuiShellComplete,
+    ShellAPIGui.GuiSqleditorExecute,
+    ShellAPIGui.GuiDbGetCatalogObjectNames,
+    ShellAPIGui.GuiDbGetTableObjectNames,
+];
+//# sourceMappingURL=ProtocolGui.js.map

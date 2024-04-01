@@ -1,0 +1,1 @@
+import{c as r,S as a}from"./console.worker-1c4f853c.js";class GraphProxy{static render(t){r.postMessage({taskId:r.currentTaskId,data:{api:a.Graph,options:t,contextId:r.currentContext,final:!0}})}}export{GraphProxy};

@@ -1,0 +1,1 @@
+call snowpark_example_procedure();

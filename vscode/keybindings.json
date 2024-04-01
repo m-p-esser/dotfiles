@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+   {
+      "key": "ctrl+i",
+      "command": "editor.debug.action.showDebugHover",
+      "when": "editorTextFocus && inDebugMode"
+   },
+   {
+      "key": "ctrl+k ctrl+i",
+      "command": "-editor.debug.action.showDebugHover",
+      "when": "editorTextFocus && inDebugMode"
+   }
+]

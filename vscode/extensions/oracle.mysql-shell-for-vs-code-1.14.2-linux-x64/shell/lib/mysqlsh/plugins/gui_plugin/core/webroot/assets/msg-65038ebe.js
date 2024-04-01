@@ -1,0 +1,1 @@
+import{g as e}from"./monaco-editor-3ec5f4cc.js";import"./dependencies-a10b35e1.js";const o={...e},t={defaultToken:"invalid",ignoreCase:!0,start:"msg",tokenizer:{msg:[[/[[\](){}]/,{token:"string"}]]}};export{t as language,o as languageConfiguration};

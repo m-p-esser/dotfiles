@@ -1,0 +1,70 @@
+{
+	"name": "vscode-fold",
+	"displayName": "Fold",
+	"description": "Auto-folding of indented lines for Visual Studio Code",
+	"version": "1.4.3",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/felicio/vscode-fold.git"
+	},
+	"publisher": "felicio",
+	"license": "SEE LICENSE IN LICENSE",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"auto",
+		"fold",
+		"region",
+		"indent",
+		"vim"
+	],
+	"galleryBanner": {
+		"color": "#007acc",
+		"theme": "dark"
+	},
+	"qna": false,
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "fold.foldLevelDefault",
+				"title": "Fold Level Default"
+			}
+		],
+		"configuration": {
+			"title": "Fold",
+			"properties": {
+				"fold.level": {
+					"type": "number",
+					"default": 2,
+					"description": "Default fold level",
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"eslint": "^4.11.0",
+		"vscode": "^1.1.33"
+	},
+	"__metadata": {
+		"id": "ede3921c-8fa4-43c7-b305-2c38a5766694",
+		"publisherDisplayName": "Felicio Mununga",
+		"publisherId": "25f0dc03-4b8c-49ac-bf77-1853c3ec9efa",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1693596286297,
+		"preRelease": false
+	}
+}

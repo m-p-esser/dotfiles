@@ -1,0 +1,349 @@
+/* MRS Grammar Test
+Copyright (c) 2023, Oracle and/or its affiliates. */
+
+# cSpell:ignore gtid
+CONFIGURE REST METADATA
+    ENABLED
+    UPDATE IF AVAILABLE;
+
+CREATE OR REPLACE REST SERVICE localhost/myTestService;
+
+CREATE OR REPLACE REST SERVICE localhost/myTestService
+    ENABLED
+    COMMENTS "A simple REST service"
+    AUTHENTICATION
+        PATH "/authentication"
+        REDIRECTION DEFAULT
+        VALIDATION DEFAULT
+        PAGE CONTENT DEFAULT
+    OPTIONS {
+        "headers": {
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With, Origin, X-Auth-Token",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        "http": {
+            "allowedOrigin": "auto"
+        },
+        "logging": {
+            "exceptions": true,
+            "request": {
+                "body": true,
+                "headers": true
+            },
+            "response": {
+                "body": true,
+                "headers": true
+            }
+        },
+        "returnInternalErrorDetails": true
+    };
+
+ALTER REST SERVICE localhost/myTestService
+    NEW REQUEST PATH localhost/myAlteredTestService
+    DISABLED
+    COMMENTS "A real simple REST service"
+    AUTHENTICATION
+        PATH "/authentication2"
+        REDIRECTION "/authReDir"
+        VALIDATION "/authVal"
+    OPTIONS {
+        "logging": {
+            "exceptions": true
+        },
+        "returnInternalErrorDetails": false
+    };
+
+ALTER REST SERVICE localhost/myAlteredTestService
+    NEW REQUEST PATH localhost/myTestService;
+
+CREATE REST SCHEMA ON SERVICE localhost/myTestService FROM `sakila`
+    ENABLED
+    AUTHENTICATION REQUIRED
+    ITEMS PER PAGE 25
+    COMMENTS "The sakila schema";
+
+USE REST SERVICE localhost/myTestService;
+
+CREATE OR REPLACE REST SCHEMA /sakila FROM `sakila`
+    DISABLED
+    OPTIONS {
+        "logging": {
+            "exceptions": true
+        },
+        "returnInternalErrorDetails": false
+    };
+
+ALTER REST SCHEMA /sakila
+    NEW REQUEST PATH /sakila2
+    DISABLED;
+
+ALTER REST SCHEMA /sakila2
+    NEW REQUEST PATH /sakila;
+
+USE REST SCHEMA /sakila;
+
+CREATE OR REPLACE REST DUALITY VIEW /city
+AS `sakila`.`city`;
+
+SHOW CREATE REST VIEW /city;
+
+ALTER REST VIEW /city CLASS MyServiceSakilaCity2;
+
+SHOW CREATE REST VIEW /city;
+
+CREATE OR REPLACE REST DUALITY VIEW /city
+    AS sakila.city
+    CLASS MyServiceSakilaCity {
+        cityId: city_id,
+        city: city,
+        countryId: country_id,
+        lastUpdate: last_update,
+        address: sakila.address @UNNEST {
+            address: address
+        },
+        country: sakila.country {
+            countryId: country_id @SORTABLE,
+            country: country
+        }
+    };
+
+CREATE OR REPLACE REST DUALITY VIEW /country
+ON SERVICE localhost/myTestService SCHEMA /sakila
+AS sakila.country CLASS MyServiceSakilaCountry @SELECT @INSERT @UPDATE @DELETE {
+    countryId: country_id @SORTABLE,
+    country: country,
+    lastUpdate: last_update,
+    cities: sakila.city {
+        city: city
+    }
+}
+ENABLED
+AUTHENTICATION REQUIRED
+ITEMS PER PAGE 25
+COMMENTS "The sakila.country table"
+MEDIA TYPE "Test"
+FORMAT FEED
+AUTHENTICATION PROCEDURE sakila.auth_proc;
+
+CREATE OR REPLACE REST DUALITY VIEW /actor
+AS `sakila`.`actor` CLASS MyServiceSakilaActor {
+    actorId: actor_id @SORTABLE,
+    firstName: first_name,
+    lastName: last_name,
+    lastUpdate: last_update,
+    filmActor: sakila.film_actor @UNNEST {
+        film: sakila.film @UNNEST {
+            title: title
+        }
+    }
+};
+
+CREATE REST DUALITY VIEW /actorInfo
+AS `sakila`.`actor_info` CLASS MyServiceSakilaActorInfo {
+    actorId: actor_id @SORTABLE,
+    firstName: first_name,
+    lastName: last_name,
+    filmInfo: film_info
+};
+
+ALTER REST DUALITY VIEW /actorInfo
+ON SERVICE localhost/myTestService SCHEMA /sakila
+DISABLED
+OPTIONS {
+    "option1": "this is option 1",
+    "option2": {
+        "option11": "this is option 1.1"
+    }
+}
+FORMAT ITEM;
+
+ALTER REST DUALITY VIEW /actorInfo
+NEW REQUEST PATH /actorInfo2
+CLASS MyServiceSakilaActorInfoTest;
+
+ALTER REST DUALITY VIEW /actorInfo2
+NEW REQUEST PATH /actorInfo;
+
+SHOW CREATE REST VIEW /actorInfo;
+
+ALTER REST DUALITY VIEW /actorInfo
+CLASS MyServiceSakilaActorInfoTest2 @UPDATE @INSERT @DELETE {
+    actorId: actor_id @SORTABLE,
+    firstName: first_name
+}
+DISABLED;
+
+SHOW CREATE REST VIEW /actorInfo;
+
+ALTER REST DUALITY VIEW /actorInfo
+CLASS MyServiceSakilaActorInfoTest5 {
+    actorId: actor_id @SORTABLE,
+    firstName: first_name
+};
+
+SHOW CREATE REST VIEW /actorInfo;
+
+CREATE OR REPLACE REST PROCEDURE /filmInStock
+AS sakila.film_in_stock
+PARAMETERS MyServiceSakilaFilmInStockParams {
+    pFilmId: p_film_id @IN,
+    pStoreId: p_store_id @IN,
+    pFilmCount: p_film_count @OUT
+}
+RESULT MyServiceSakilaFilmInStock {
+    inventoryId: inventory_id @DATATYPE("int")
+};
+
+SHOW CREATE REST PROCEDURE /filmInStock;
+
+ALTER REST PROCEDURE /filmInStock
+ON SERVICE localhost/myTestService SCHEMA /sakila
+PARAMETERS {
+    pFilmId: p_film_id @IN,
+    pStoreId: p_store_id @IN,
+    pFilmCount: p_film_count @OUT
+}
+RESULT {
+    inventoryId: inventory_id @DATATYPE("int")
+}
+RESULT {
+    inventoryId2: inventory_id @DATATYPE("int")
+};
+
+SHOW CREATE REST PROCEDURE /filmInStock;
+
+ALTER REST PROCEDURE /filmInStock
+ON SERVICE localhost/myTestService SCHEMA /sakila
+NEW REQUEST PATH /filmInStockUpdated
+PARAMETERS MyServiceSakilaFilmInStockUpdated {
+    pFilmId: p_film_id @IN,
+    pStoreId: p_store_id @IN,
+    pFilmCount: p_film_count @OUT
+}
+RESULT MyServiceSakilaFilmInStock {
+    inventoryId: inventory_id @DATATYPE("int")
+}
+RESULT MyServiceSakilaFilmInStock2 {
+    inventoryId2: inventory_id @DATATYPE("int")
+};
+
+SHOW CREATE REST PROCEDURE /filmInStockUpdated;
+
+ALTER REST PROCEDURE /filmInStockUpdated
+ON SERVICE localhost/myTestService SCHEMA /sakila
+NEW REQUEST PATH /filmInStock
+PARAMETERS MyServiceSakilaFilmInStockParams {
+    pFilmId: p_film_id @IN,
+    pStoreId: p_store_id @IN,
+    pFilmCount: p_film_count @OUT
+}
+RESULT MyServiceSakilaFilmInStock {
+    inventoryId: inventory_id @DATATYPE("int")
+}
+RESULT MyServiceSakilaFilmInStock2 {
+    inventoryId2: inventory_id @DATATYPE("int")
+};
+
+SHOW CREATE REST PROCEDURE /filmInStock;
+
+SHOW CREATE REST VIEW /country;
+SHOW CREATE REST PROCEDURE /filmInStock;
+
+CREATE REST CONTENT SET /testContent
+ON SERVICE localhost/myTestService
+FROM "./grammar/test";
+
+SHOW REST CONTENT SETS;
+
+SHOW REST METADATA STATUS;
+
+SHOW REST SERVICES;
+
+SHOW REST SCHEMAS;
+
+SHOW REST DUALITY VIEWS
+    FROM SERVICE localhost/myTestService SCHEMA /sakila;
+
+SHOW REST PROCEDURES;
+
+SHOW CREATE REST SERVICE localhost/myTestService;
+
+SHOW CREATE REST SCHEMA /sakila;
+
+SHOW CREATE REST DUALITY VIEW /actorInfo;
+
+ALTER REST SCHEMA /sakila
+ON SERVICE localhost/myTestService
+NEW REQUEST PATH /sakila123;
+
+SHOW REST SCHEMAS;
+
+ALTER REST SCHEMA /sakila123
+ON SERVICE localhost/myTestService
+NEW REQUEST PATH /sakila;
+
+SHOW REST SCHEMAS;
+
+CREATE REST AUTH APP "MRS" ON SERVICE localhost/myTestService VENDOR MRS;
+
+CREATE REST USER "mike"@"MRS" IDENTIFIED BY "1234";
+
+DROP REST USER "mike"@"MRS";
+
+CREATE REST AUTH APP "MySQL" ON SERVICE localhost/myTestService VENDOR MySQL
+ALLOW NEW USERS TO REGISTER
+DEFAULT ROLE "Full Access";
+
+SHOW REST AUTH APPS FROM SERVICE localhost/myTestService;
+
+SHOW CREATE REST AUTH APP "MRS" FROM SERVICE localhost/myTestService;
+
+SHOW CREATE REST AUTH APP "MySQL" FROM SERVICE localhost/myTestService;
+
+ALTER REST SERVICE localhost/myTestService DISABLED;
+
+DROP REST AUTH APP "MRS";
+
+DROP REST AUTH APP "MySQL" FROM SERVICE localhost/myTestService;
+
+DROP REST DUALITY VIEW /country
+FROM SERVICE localhost/myTestService SCHEMA /sakila;
+
+DROP REST DUALITY VIEW /actor;
+
+DROP REST DUALITY VIEW /actorInfo;
+
+DROP REST PROCEDURE /filmInStock;
+
+DROP REST CONTENT SET /testContent;
+
+CREATE OR REPLACE REST DUALITY VIEW /moviesByLanguage
+ON SERVICE localhost/myTestService SCHEMA /sakila
+AS `sakila`.`language` {
+    id: language_id,
+    name: name,
+    films: film {
+        title: title
+    }
+};
+
+CREATE OR REPLACE REST FUNCTION /actorFunc
+ON SERVICE localhost/myTestService SCHEMA /sakila
+AS `sakila`.`actor`;
+
+CREATE OR REPLACE REST FUNCTION /actorFunc
+    ON SERVICE localhost/myTestService SCHEMA /sakila
+    AS sakila.actor
+    PARAMETERS LocalhostMyServiceSakilaActorFuncParams {
+        s: s @IN
+    }
+    RESULT LocalhostMyServiceSakilaActorFunc {
+        result: result @DATATYPE("char")
+    };
+
+DROP REST FUNCTION /actorFunc;
+
+DROP REST SCHEMA /sakila FROM localhost/myTestService;
+
+DROP REST SERVICE localhost/myTestService;

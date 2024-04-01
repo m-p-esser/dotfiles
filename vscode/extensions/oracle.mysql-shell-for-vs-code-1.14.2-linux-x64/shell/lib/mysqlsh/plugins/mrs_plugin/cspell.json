@@ -1,0 +1,36 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "sakila",
+        "struct",
+        "symlink",
+        "unregister",
+        "UPDATEPROCEDURE",
+        "READFUNCTION",
+        "urandom"
+    ],
+    "flagWords": [
+        "hte"
+    ],
+    "ignorePaths": [],
+    "ignoreWords": [
+        "mysqlsh",
+        "PYTHONPATH",
+        "InnoDB",
+        "mysqlrouter",
+        "myservice",
+        "AREST",
+        "ORDS",
+        "unnest",
+        "tinyint",
+        "mediumint",
+        "unnested",
+        "notnull",
+        "ANTLR",
+        "Dlanguage",
+        "REDUCETO",
+        "typecheck",
+        "preact"
+    ]
+}

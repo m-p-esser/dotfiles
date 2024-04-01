@@ -1,0 +1,80 @@
+{
+    "editor.fontSize": 11,
+    "editor.tabSize": 3,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "editor.links": false,
+    "editor.hover.enabled": true,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+    },
+    "editor.wrappingIndent": "indent",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.colorDecorators": false,
+    "editor.tokenColorCustomizations": {
+        "[Eagle Oceanic Next]": {
+            "comments": "#748691", // blue/gray
+            "numbers": "#ffc275", // orange
+            "types": "#e2e2e2" //light gray
+        }
+    },
+    "workbench.colorCustomizations": {
+        // "editor.background": "#313D47",
+        "statusBar.background": "#303030",
+        "statusBar.noFolderBackground": "#222225",
+        "statusBar.debuggingBackground": "#511f1f",
+        "editorIndentGuide.background": "#3F4950",
+        "editorIndentGuide.activeBackground": "#465259"
+    },
+    "workbench.editor.highlightModifiedTabs": false,
+    "workbench.editor.tabSizing": "shrink",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.tabCompletion": "off",
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.dragAndDrop": false,
+    "editor.folding": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.find.autoFindInSelection": "always",
+    "editor.formatOnType": true,
+    "editor.parameterHints.enabled": true,
+    "editor.occurrencesHighlight": false,
+    "editor.matchBrackets": "always",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "files.autoSaveDelay": 1,
+    "liveServer.settings.wait": 1,
+    "editor.wordWrap": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "search.collapseResults": "alwaysCollapse",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "workbench.editorAssociations": {
+        "*.parquet": "parquetViewer.parquetViewer",
+        "*.sql": "sql-notebook",
+        "*.bqsql": "default"
+    },
+    "editor.fontLigatures": false,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.inlineSuggest.enabled": true,
+    "debug.console.fontFamily": "JetBrainsMono Nerd Font",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "sqltools.connections": [],
+    "sqltools.useNodeRuntime": true,
+    "git.decorations.enabled": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "notebook.output.scrolling": true,
+    "terminal.integrated.fontSize": 10,
+}
