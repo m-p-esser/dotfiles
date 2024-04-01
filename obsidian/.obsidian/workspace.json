@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "adc7f16ff36f3e2a",
+        "id": "d88615c6e515fda7",
         "type": "tabs",
         "children": [
           {
-            "id": "78a0edfb657b6796",
+            "id": "645916ac3542cdbd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "000 Periodic/2024-03-31.md",
+                "file": "Second Brain.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d6f087a8d75d425",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lekkerland Onboarding.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#articles snowflake ",
+                "query": "tag:#books  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 355.5,
-    "collapsed": true
+    "width": 389
   },
   "right": {
     "id": "caeda26533de9ff0",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "000 Periodic/2024-03-31.md",
+                "file": "Lekkerland Onboarding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "000 Periodic/2024-03-31.md",
+                "file": "Lekkerland Onboarding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +127,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": false
               }
             }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "000 Periodic/2024-03-31.md"
+                "file": "Lekkerland Onboarding.md"
               }
             }
           },
@@ -137,14 +149,20 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "03a642d016b6751e",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,57 +176,64 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false
+      "obsidian-focus-mode:Toggle Focus Mode (Shift + Click to show active pane only)": false,
+      "quick-tagger:Add tag to current note": false,
+      "quick-tagger:Remove tag from current note": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "78a0edfb657b6796",
+  "active": "595b467381e590f4",
   "lastOpenFiles": [
-    "500 Meta/Zotero/SQL cookbook - query solutions and techniques for database developers.md",
-    "500 Meta/Zotero/Snowflake - the definitive guide - architecting, designing, and deploying on the Snowflake Data Cloud.md",
-    "500 Meta/Zotero/The Data Warehouse Toolkit - the definitive guide to Dimensional Modeling.md",
-    "500 Meta/Obsidian/Templates/Book Note.md",
-    "000 Periodic/2024-03-31.md",
-    "500 Meta/Readwise/Articles/First Look at the Official Readwise Obsidian Plugin - Ben Newton.md",
-    "500 Meta/Obsidian/Templates/New Note.md",
-    "500 Meta/Obsidian/Templates/Daily Note.md",
-    "500 Meta/Zotero/avilaSnowflakeDefinitiveGuide.md",
-    "500 Meta/Zotero",
-    "000 Inbox/The Data Warehouse Toolkit 1.md",
-    "000 Inbox/The Data Warehouse Toolkit 3.md",
-    "Kimball Notes.md",
-    "000 Periodic/2024-03-30.md",
-    "000 Inbox/Bash MOC.md",
-    "Heptabase Whiteboards.md",
-    "500 Meta/Readwise/Articles/Unlocking DBT - Cameron Cyr & Dustin Dorsey.md",
-    "000 Periodic/2024-03-29.md",
-    "000 Inbox/Dimensional Modeling.canvas",
-    "000 Inbox/⚙ Technical architecture Design.md",
-    "000 Inbox/Dimensional Modeling.md",
-    "000 Inbox/Build ELT & ETL process.md",
-    "000 Inbox/Data Mart.md",
-    "000 Inbox/Conceptual Data Model 1.md",
-    "000 Inbox/Dimensional Modeling 1.md",
-    "000 Inbox/Stakeholder.md",
-    "000 Inbox/Stakeholder 1.md",
-    "000 Inbox/Optimizing Queries.md",
-    "200 Areas of Responsibility/Data Engineering",
-    "500 Meta/Obsidian/Files/Zero-key-assets/image 138.png",
-    "500 Meta/Obsidian/Files/Zero-key-assets",
-    "500 Meta/Obsidian/Files/Wireframe-assets/Pasted image 20221210160431.png",
-    "500 Meta/Obsidian/Files/Wireframe-assets",
-    "500 Meta/Obsidian/Files/Value Band Dimension-assets/Pasted image 20221230193806.png",
-    "500 Meta/Obsidian/Files/Value Band Dimension-assets",
-    "500 Meta/Obsidian/Files/Using Effectivity or Status Tracking satellite to track sequence key movement-assets/image 154.png",
-    "500 Meta/Obsidian/Files/Using Effectivity or Status Tracking satellite to track sequence key movement-assets",
-    "500 Meta/Obsidian/Files/Useful Diagrams-assets/image 199.png",
-    "500 Meta/Obsidian/Files/Useful Diagrams-assets",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 172220.jpeg",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 171550.jpeg",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240203 171540.jpeg",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240202 163520.jpeg",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets/Untitled 20240202 163437.jpeg",
-    "500 Meta/Obsidian/Files/Unstructured dbt Notes-assets",
-    "500 Meta/Obsidian/Files/Types of tests in Data Vault-assets",
-    "500 Meta/Obsidian/Files/Transaction Fact Table-assets"
+    "200 Areas of Responsibility/Data Engineering/Data Engineering.md",
+    "Lekkerland Onboarding.md",
+    "000 Inbox/Loading Type 1 Dimensions.md",
+    "000 Inbox/Truncating the Staging Area.md",
+    "000 Inbox/Triage Decision.md",
+    "200 Areas of Responsibility/Data Engineering/Technical Architecture Design.md",
+    "200 Areas of Responsibility/Data Engineering/Source System Analysis.md",
+    "000 Inbox/Source System Dimension.md",
+    "200 Areas of Responsibility/Data Engineering/Significance of the Contextual Role.md",
+    "000 Inbox/Personally identifiable information (PII) in context of Data Vault.md",
+    "000 Inbox/Order Management.md",
+    "200 Areas of Responsibility/Data Engineering/Document Store.md",
+    "200 Areas of Responsibility/Data Engineering/Data Vault vs. Kimball.md",
+    "200 Areas of Responsibility/Data Engineering/Reusuable components in Dimensional Modeling.md",
+    "000 Inbox/Report Collection.md",
+    "000 Inbox/Query assistance.md",
+    "000 Inbox/Record Tracking Satellite.md",
+    "000 Inbox/Reference Table.md",
+    "000 Inbox/Referential integrity is not forced within the Data Vault, but tests should be setup to check if DV .md",
+    "000 Inbox/Referrer.md",
+    "000 Inbox/Related Search for Content.md",
+    "200 Areas of Responsibility/Data Engineering/Relational Database.md",
+    "200 Areas of Responsibility/Requirements Engineering/Requirements gathering in a Dimensional modeling.md",
+    "200 Areas of Responsibility/Data Engineering/Self Service.md",
+    "200 Areas of Responsibility/Requirements Engineering/Sketch.md",
+    "200 Areas of Responsibility/Data Engineering/Soft busines rule.md",
+    "500 Meta/Obsidian/Files/Pasted image 20240401130728.png",
+    "000 Inbox/RuleSpeak Sentence Forms v2-2-3.pdf",
+    "200 Areas of Responsibility/SAP/SAP.canvas",
+    "200 Areas of Responsibility/Data Engineering/Snowflake.canvas",
+    "200 Areas of Responsibility/SAP",
+    "200 Areas of Responsibility/Home & Household",
+    "300 Ressources/Data Science",
+    "200 Areas of Responsibility/Data Engineering/Data Modeling Design Patterns.canvas",
+    "200 Areas of Responsibility/Data Engineering/Dimensional Modeling.canvas",
+    "200 Areas of Responsibility/Software Engineering",
+    "200 Areas of Responsibility/Requirements Engineering",
+    "500 Meta/Obsidian/Files/Pasted image 20240401133540.png",
+    "200 Areas of Responsibility/Data Engineering/dbt.canvas",
+    "500 Meta/Obsidian/Files/Pasted image 20240401131013.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401130945.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401115514.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401115615.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401105349.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401112222.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401111908.png",
+    "500 Meta/Obsidian/Files/Pasted image 20240401110249.png",
+    "200 Areas of Responsibility/SAP",
+    "200 Areas of Responsibility/Business",
+    "300 Ressources/Free Time",
+    "300 Ressources/Photography"
   ]
 }

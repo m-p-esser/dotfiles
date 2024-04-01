@@ -1,5 +1,7 @@
 {
   "promptDelete": false,
   "propertiesInDocument": "source",
-  "spellcheck": false
+  "spellcheck": false,
+  "vimMode": true,
+  "alwaysUpdateLinks": true
 }

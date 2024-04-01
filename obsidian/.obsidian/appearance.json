@@ -1,5 +1,5 @@
 {
-  "accentColor": "",
+  "accentColor": "#1a88ff",
   "interfaceFontFamily": "JetBrainsMono Nerd Font",
   "textFontFamily": "JetBrainsMono Nerd Font",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
@@ -7,5 +7,5 @@
   "cssTheme": "Encore",
   "baseFontSize": 18,
   "showViewHeader": true,
-  "theme": "obsidian"
+  "theme": "moonstone"
 }

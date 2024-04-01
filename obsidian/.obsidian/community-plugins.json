@@ -18,5 +18,8 @@
   "collapse-node",
   "optimize-canvas-connections",
   "obsidian-zotero-desktop-connector",
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "advanced-canvas",
+  "quick-tagger",
+  "mermaid-tools"
 ]

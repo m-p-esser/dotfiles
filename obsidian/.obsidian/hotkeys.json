@@ -71,5 +71,13 @@
       ],
       "key": "."
     }
+  ],
+  "quick-tagger:quick-add-tag": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
   ]
 }

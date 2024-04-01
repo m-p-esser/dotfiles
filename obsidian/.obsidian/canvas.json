@@ -3,5 +3,6 @@
   "snapToGrid": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "000 Inbox",
-  "cardLabelVisibility": "never"
+  "cardLabelVisibility": "never",
+  "zoomBreakpoint": 0.36
 }
