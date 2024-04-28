@@ -1,0 +1,20 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "500 Meta/Zotero",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [],
+  "exportFormats": [
+    {
+      "name": "Import Literature",
+      "outputPathTemplate": "500 Meta/Zotero/{{title}}.md",
+      "imageOutputPathTemplate": "500 Meta/Obsidian/Files/",
+      "imageBaseNameTemplate": "{{title}}_image",
+      "templatePath": "500 Meta/Obsidian/Templates/Book Note.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "last-imported-note"
+}

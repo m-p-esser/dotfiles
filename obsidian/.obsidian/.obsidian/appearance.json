@@ -1,0 +1,15 @@
+{
+  "accentColor": "#1a88ff",
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "baseFontSizeAction": false,
+  "cssTheme": "Encore",
+  "baseFontSize": 18,
+  "showViewHeader": true,
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "canvas-candy",
+    "dashboard"
+  ]
+}

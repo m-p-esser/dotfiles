@@ -1,0 +1,13 @@
+{
+  "siteId": "23976ba9b54a979ad7267c6a86d070bd",
+  "host": "publish-01.obsidian.md",
+  "included": [],
+  "excluded": [
+    "200 Areas of Responsibility/Data Engineering/Sensitive",
+    "200 Areas of Responsibility/SAP/Sensitive",
+    "200 Areas of Responsibility/Business/Sensitive",
+    "200 Areas of Responsibility/Requirements Engineering/Sensitive",
+    "200 Areas of Responsibility/Software Engineering/Sensitive",
+    "500 Meta/Obsidian/Files/Sensitive"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "promptDelete": false,
+  "propertiesInDocument": "source",
+  "spellcheck": false,
+  "vimMode": true,
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true,
+  "readableLineLength": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "000 Inbox"
+}
