@@ -1,8 +1,0 @@
-[sqlfluff]
-dialect = postgres
-
-[sqlfluff:rules:capitalisation.keywords]
-capitalisation_policy = upper
-
-[sqlfluff:rules:capitalisation.identifiers]
-extended_capitalisation_policy = lower

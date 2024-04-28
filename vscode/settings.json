@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 11,
+    "editor.fontSize": 14,
     "editor.tabSize": 3,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
@@ -15,18 +15,52 @@
     "editor.colorDecorators": false,
     "editor.tokenColorCustomizations": {
         "[Eagle Oceanic Next]": {
-            "comments": "#748691", // blue/gray
-            "numbers": "#ffc275", // orange
-            "types": "#e2e2e2" //light gray
-        }
+            "comments": "#748691",
+            "numbers": "#ffc275",
+            "types": "#e2e2e2"
+        },
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
     },
     "workbench.colorCustomizations": {
         // "editor.background": "#313D47",
         "statusBar.background": "#303030",
         "statusBar.noFolderBackground": "#222225",
         "statusBar.debuggingBackground": "#511f1f",
-        "editorIndentGuide.background": "#3F4950",
-        "editorIndentGuide.activeBackground": "#465259"
     },
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabSizing": "shrink",
@@ -39,19 +73,23 @@
     "editor.find.autoFindInSelection": "always",
     "editor.formatOnType": true,
     "editor.parameterHints.enabled": true,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.matchBrackets": "always",
     "liveServer.settings.CustomBrowser": "chrome",
+    "editor.renderWhitespace": "all",
     "files.autoSaveDelay": 1,
     "liveServer.settings.wait": 1,
     "editor.wordWrap": "on",
+    "editor.rulers": [
+        80
+    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
     },
     "isort.args": [
@@ -62,19 +100,39 @@
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
     "workbench.editorAssociations": {
-        "*.parquet": "parquetViewer.parquetViewer",
-        "*.sql": "sql-notebook",
         "*.bqsql": "default"
     },
     "editor.fontLigatures": false,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.inlineSuggest.enabled": true,
     "debug.console.fontFamily": "JetBrainsMono Nerd Font",
-    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.colorTheme": "GitHub Dark",
     "sqltools.connections": [],
     "sqltools.useNodeRuntime": true,
     "git.decorations.enabled": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "notebook.output.scrolling": true,
-    "terminal.integrated.fontSize": 10,
+    "python.interpreter.infoVisibility": "always",
+    "dbt.altimateAiKey": "77d06ed7589007b815c36764e1df9b92",
+    "dbt.altimateInstanceName": "lekkerland",
+    "turntable.dbtVersion": "1.4",
+    "turntable.warehouse": "snowflake",
+    "turntable.profilesDirectory": "C:/Users/A1E50BF/.dbt",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "dbt.dbtIntegration": "cloud",
+    "pieces.save.git.relatedLinks": false,
+    "pieces.save.git.relatedPeople": false,
+    "pieces.snippetTree.viewAs": "Flat List",
+    "pieces.save.git.description": false,
+    "pieces.autocomplete": true,
+    "pieces.sidePanelViews.suggestedMaterials": false,
+    "pieces.sidePanelViews.relatedMaterials": false,
+    "pieces.sidePanelViews.exploredMaterials": false,
+    "pieces.closeSnippetEditorOnSave": true,
+    "pieces.enrichmentSettings": "Medium (6)",
+    "pieces.searchBy": "Name and Snippet",
+    "pieces.searchResultAction": "Insert snippet at cursor position",
+    "pieces.autoSave": false,
+    "pieces.cloudCapabilities": "Local",
+    "jupyter.enableExtendedPythonKernelCompletions": true
 }

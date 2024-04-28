@@ -1,7 +1,0 @@
-{
-  "eslint.experimental.useFlatConfig": false,
-  "eslint.runtime": "node",
-  "eslint.workingDirectories": [
-    "sdk"
-  ]
-}

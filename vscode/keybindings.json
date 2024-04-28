@@ -9,5 +9,229 @@
       "key": "ctrl+k ctrl+i",
       "command": "-editor.debug.action.showDebugHover",
       "when": "editorTextFocus && inDebugMode"
+   },
+   {
+      "key": "ctrl+shift+e",
+      "command": "-workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+   },
+   {
+      "key": "shift+alt+r",
+      "command": "-revealFileInOS",
+      "when": "!editorFocus"
+   },
+   {
+      "key": "alt+t",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+   },
+   {
+      "key": "ctrl+shift+oem_3",
+      "command": "-workbench.action.terminal.new",
+      "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+   },
+   {
+      "key": "alt+d",
+      "command": "workbench.action.closeActiveEditor"
+   },
+   {
+      "key": "ctrl+f4",
+      "command": "-workbench.action.closeActiveEditor"
+   },
+   {
+      "key": "ctrl+shift+k",
+      "command": "workbench.action.showCommands"
+   },
+   {
+      "key": "ctrl+shift+p",
+      "command": "-workbench.action.showCommands"
+   },
+   {
+      "key": "alt+4",
+      "command": "workbench.action.closePanel"
+   },
+   {
+      "key": "alt+3",
+      "command": "-workbench.action.openEditorAtIndex3"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "-workbench.action.files.openFile",
+      "when": "true"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "-workbench.action.files.openFileFolder",
+      "when": "isMacNative && openFolderWorkspaceSupport"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "-workbench.action.files.openLocalFile",
+      "when": "remoteFileDialogVisible"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "-workbench.action.files.openFolderViaWorkspace",
+      "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "-extension.vim_ctrl+o",
+      "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+   },
+   {
+      "key": "ctrl+o",
+      "command": "workbench.action.quickOpen"
+   },
+   {
+      "key": "ctrl+p",
+      "command": "-workbench.action.quickOpen"
+   },
+   {
+      "key": "ctrl+e",
+      "command": "-workbench.action.quickOpen"
+   },
+   {
+      "key": "alt+1",
+      "command": "workbench.action.toggleSidebarVisibility"
+   },
+   {
+      "key": "alt+1",
+      "command": "-workbench.action.openEditorAtIndex1"
+   },
+   {
+      "key": "ctrl+alt+b",
+      "command": "-workbench.action.toggleAuxiliaryBar"
+   },
+   {
+      "key": "alt+2",
+      "command": "workbench.action.toggleAuxiliaryBar"
+   },
+   {
+      "key": "alt+2",
+      "command": "-workbench.action.openEditorAtIndex2"
+   },
+   {
+      "key": "alt+3",
+      "command": "workbench.action.togglePanel"
+   },
+   {
+      "key": "ctrl+j",
+      "command": "-workbench.action.togglePanel"
+   },
+   {
+      "key": "ctrl+oem_1 b",
+      "command": "-jupyter.insertCellBelow",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "ctrl+oem_1 a",
+      "command": "-jupyter.insertCellAbove",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "shift+alt+m",
+      "command": "jupyter.changeCellToMarkdown",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "ctrl+oem_1 m",
+      "command": "-jupyter.changeCellToMarkdown",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "shift+alt+c",
+      "command": "jupyter.changeCellToCode",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "ctrl+oem_1 c",
+      "command": "-jupyter.changeCellToCode",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "ctrl+oem_1 s",
+      "command": "-jupyter.insertCellBelowPosition",
+      "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "alt+j",
+      "command": "notebook.cell.insertCodeCellAboveAndFocusContainer",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "a",
+      "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "alt+k",
+      "command": "notebook.cell.insertCodeCellBelowAndFocusContainer",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "b",
+      "command": "-notebook.cell.insertCodeCellBelowAndFocusContainer",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "shift+alt+enter",
+      "command": "editor.action.inlineEdit.jumpTo",
+      "when": "inlineEditVisible && !cursorAtInlineEdit && !editorReadonly"
+   },
+   {
+      "key": "ctrl+alt+oem_plus",
+      "command": "-editor.action.inlineEdit.jumpTo",
+      "when": "inlineEditVisible && !cursorAtInlineEdit && !editorReadonly"
+   },
+   {
+      "key": "ctrl+shift+enter",
+      "command": "jupyter.selectCell",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "ctrl+shift+alt+oem_5",
+      "command": "-jupyter.selectCell",
+      "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+   },
+   {
+      "key": "y",
+      "command": "notebook.cell.copy",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "c",
+      "command": "-notebook.cell.copy",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "shift+p",
+      "command": "notebook.cell.paste",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "v",
+      "command": "-notebook.cell.paste",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "y",
+      "command": "-notebook.cell.changeToCode",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'markup'"
+   },
+   {
+      "key": "m",
+      "command": "-notebook.cell.changeToMarkdown",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+   },
+   {
+      "key": "shift+x",
+      "command": "notebook.cell.cut",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+   },
+   {
+      "key": "x",
+      "command": "-notebook.cell.cut",
+      "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
    }
 ]
