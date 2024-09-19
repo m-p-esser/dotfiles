@@ -1,0 +1,60 @@
+import = ["~/alacritty/themes/themes/ashes_light.toml"]
+
+live_config_reload = true
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.offset]
+# Line Spacing
+y = 5
+
+[cursor]
+
+[cursor.style]
+shape = "Block"
+blinking = "Off"
+
+[shell]
+program = "C:/git-sdk-64/usr/bin/zsh.exe -l -i"
+
+[window]
+dynamic_padding = false
+opacity = 0.9
+# Window title
+title = "Alacritty"
+
+# Blank space added around the window in pixels. This padding is scaled
+# by DPI and the specified value is always added at both opposing sides.
+[window.padding]
+x = 15
+y = 0
+
+[scrolling]
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+history = 10000
+
+[selection]
+
+
+[[keyboard.bindings]]
+mods = "Alt"
+action = "SpawnNewInstance"
+key = "V"
