@@ -24,16 +24,16 @@ alias dcat='cd OneDrive\ -\ Lekkerland/General\ -\ Snowflake/Snowflake\ PROD/Inp
 # CLI utility
 alias c="clear"
 alias e="exit"
-alias ls='ls | cut -c1-20 | column -c"${COLUMNS:-80}"'
-alias lsd1='tree -d -L 1.'
-alias lsd2='tree -d -L 2.'
+# alias tree='tree -d -L 1.'
 alias fe='explorer.exe .'
+alias cat='bat'
 
 # GIT
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
+alias gd='git diff'
 
 # Programs/Package Managers/Config Managers
 alias gcloud="gcloud.cmd"
@@ -45,9 +45,17 @@ alias starship="~/scoop/shims/starship.exe"
 alias bat="~/scoop/shims/bat.exe"
 alias rg="~/Scoop/shims/rg.exe"
 alias fzf="~/Scoop/shims/fzf.exe"
+alias wget="~/scoop/shims/wget.exe"
+alias minikube="~/Scoop/shims/minikube.exe"
+alias docker="~/Scoop/shims/docker.exe"
+alias tasks="~/Scoop/shims/task.exe"
+alias nvim="~/Scoop/shims/nvim.exe"
+alias rg="~/Scoop/shims/rg.exe" # Ripgrep
 alias git-credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
 alias credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
 alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
+alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
+alias dbt="./dbt.exe"
 
 
 tmux () {
@@ -133,6 +141,8 @@ plugins=(
    zsh-autosuggestions
    )
 
+plugins+=(zsh-vi-mode)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -162,9 +172,14 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ~~~~~~~~~~~~~~~ Shell Integrations ~~~~~~~~~~~~~~~~~~~~~~~~
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
-# added by Snowflake SnowSQL installer
-export PATH=/c/Users/A1E50BF/bin:$PATH
+
+eval "$(uv generate-shell-completion zsh)"
+
+eval "$(task --completion zsh)"
+
+alias ls='eza --long --header --icons'
+eval "$(uv generate-shell-completion zsh)"
