@@ -1,6 +1,5 @@
 {
     "editor.fontSize": 14,
-    "editor.tabSize": 3,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
     "editor.links": false,
@@ -10,6 +9,9 @@
         "strings": "on",
         "other": "on"
     },
+    "zenMode.centerLayout": false, 
+    "zenMode.hideLineNumbers": false,
+    "zenMode.showTabs": "single",
     "editor.wrappingIndent": "indent",
     "workbench.startupEditor": "newUntitledFile",
     "editor.colorDecorators": false,
@@ -61,6 +63,8 @@
         "statusBar.background": "#303030",
         "statusBar.noFolderBackground": "#222225",
         "statusBar.debuggingBackground": "#511f1f",
+        "editorError.foreground": "#00000000",
+        "editorWarning.foreground": "#00000000"
     },
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabSizing": "shrink",
@@ -76,7 +80,7 @@
     "editor.occurrencesHighlight": "off",
     "editor.matchBrackets": "always",
     "liveServer.settings.CustomBrowser": "chrome",
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "files.autoSaveDelay": 1,
     "liveServer.settings.wait": 1,
     "editor.wordWrap": "on",
@@ -85,20 +89,12 @@
     ],
     "liveServer.settings.donotShowInfoMsg": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
-    },
     "isort.args": [
         "--profile",
         "black"
     ],
     "search.collapseResults": "alwaysCollapse",
     "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
     "workbench.editorAssociations": {
         "*.bqsql": "default"
     },
@@ -106,11 +102,10 @@
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.inlineSuggest.enabled": true,
     "debug.console.fontFamily": "JetBrainsMono Nerd Font",
-    "workbench.colorTheme": "GitHub Dark",
     "sqltools.connections": [],
     "sqltools.useNodeRuntime": true,
     "git.decorations.enabled": false,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.windows": "Zsh",
     "notebook.output.scrolling": true,
     "python.interpreter.infoVisibility": "always",
     "dbt.altimateAiKey": "77d06ed7589007b815c36764e1df9b92",
@@ -118,7 +113,6 @@
     "turntable.dbtVersion": "1.4",
     "turntable.warehouse": "snowflake",
     "turntable.profilesDirectory": "C:/Users/A1E50BF/.dbt",
-    "diffEditor.hideUnchangedRegions.enabled": true,
     "dbt.dbtIntegration": "cloud",
     "pieces.save.git.relatedLinks": false,
     "pieces.save.git.relatedPeople": false,
@@ -134,5 +128,67 @@
     "pieces.searchResultAction": "Insert snippet at cursor position",
     "pieces.autoSave": false,
     "pieces.cloudCapabilities": "Local",
-    "jupyter.enableExtendedPythonKernelCompletions": true
+    "jupyter.enableExtendedPythonKernelCompletions": true,
+    "cloudcode.project": "lis-it1401",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Zsh": {
+            "path": "C:\\git-sdk-64\\usr\\bin\\zsh.exe",
+            "args": [
+                "-l",
+                "-i"
+            ]
+        }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "geminicodeassist.project": "",
+    "[jinja-sql]": {
+        "editor.defaultFormatter": "henriblancke.vscode-dbt-formatter"
+    },
+    "dbt.lineage.defaultExpansion": 2,
+    "dbt.perspectiveTheme": "Pro Dark",
+    "snowflake.connectionsConfigFile": "C:\\Users\\A1E50BF\\.snowflake\\connections.toml",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\A1E50BF\\scoop\\shims\\nvim.exe",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers": "relative",
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "One Monokai",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "ruff.enable": false,
+    "editor.detectIndentation": false,
+    "editor.inlayHints.enabled": "off",
+    "yaml.schemas": {
+        "file:///c%3A/Users/A1E50BF/.vscode/extensions/atlassian.atlascode-3.6.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "743eb0aa-0308-4984-8020-1dc43219b49f",
+            "enabled": true,
+            "name": "My lekkerland-cloud Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "1a4848d4-e182-4b8d-8d5b-2287f300d483",
+            "monitor": true
+        }
+    ],
+    "atlascode.jira.enabled": true
 }

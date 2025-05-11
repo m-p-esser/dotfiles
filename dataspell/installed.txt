@@ -1,3 +1,0 @@
-com.andrey4623.rainbowcsv
-com.github.obiscr.exceleditor
-IdeaVIM
