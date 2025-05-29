@@ -31,8 +31,10 @@ alias cat='bat'
 # GIT
 alias gs='git status'
 alias ga='git add'
+alias gb='git branch'
 alias gc='git commit'
 alias gp='git push'
+alias gl='git pull'
 alias gd='git diff'
 
 # Programs/Package Managers/Config Managers
