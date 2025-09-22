@@ -183,5 +183,6 @@ eval "$(uv generate-shell-completion zsh)"
 
 eval "$(task --completion zsh)"
 
-alias ls='eza --long --header --icons'
 eval "$(uv generate-shell-completion zsh)"
+
+. "$HOME/.local/bin/env"
