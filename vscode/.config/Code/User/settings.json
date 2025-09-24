@@ -190,5 +190,7 @@
             "monitor": true
         }
     ],
-    "atlascode.jira.enabled": true
+    "atlascode.jira.enabled": true,
+    "vscode-neovim.neovimExecutablePaths.linux": "/snap/nvim/current/usr/bin/nvim",
+    "git.openRepositoryInParentFolders": "never"
 }

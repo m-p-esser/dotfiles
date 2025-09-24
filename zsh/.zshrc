@@ -38,26 +38,26 @@ alias gl='git pull'
 alias gd='git diff'
 
 # Programs/Package Managers/Config Managers
-alias gcloud="gcloud.cmd"
-alias python="~/AppData/Local/Programs/Python/Python312/python.exe"
-alias pip="~/AppData/Local/Programs/Python/Python312/Scripts/pip.exe"
-alias pip3="~/AppData/Local/Programs/Python/Python312/Scripts/pip3.exe"
-alias scoop="~/scoop/shims/scoop.cmd"
-alias starship="~/scoop/shims/starship.exe"
-alias bat="~/scoop/shims/bat.exe"
-alias rg="~/Scoop/shims/rg.exe"
-alias fzf="~/Scoop/shims/fzf.exe"
-alias wget="~/scoop/shims/wget.exe"
-alias minikube="~/Scoop/shims/minikube.exe"
-alias docker="~/Scoop/shims/docker.exe"
-alias tasks="~/Scoop/shims/task.exe"
-alias nvim="~/Scoop/shims/nvim.exe"
-alias rg="~/Scoop/shims/rg.exe" # Ripgrep
-alias git-credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
-alias credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
-alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
-alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
-alias dbt="./dbt.exe"
+# alias gcloud="gcloud.cmd"
+# alias python="~/AppData/Local/Programs/Python/Python312/python.exe"
+# alias pip="~/AppData/Local/Programs/Python/Python312/Scripts/pip.exe"
+# alias pip3="~/AppData/Local/Programs/Python/Python312/Scripts/pip3.exe"
+# alias scoop="~/scoop/shims/scoop.cmd"
+# alias starship="~/scoop/shims/starship.exe"
+# alias bat="~/scoop/shims/bat.exe"
+# alias rg="~/Scoop/shims/rg.exe"
+# alias fzf="~/Scoop/shims/fzf.exe"
+# alias wget="~/scoop/shims/wget.exe"
+# alias minikube="~/Scoop/shims/minikube.exe"
+# alias docker="~/Scoop/shims/docker.exe"
+# alias tasks="~/Scoop/shims/task.exe"
+# alias nvim="~/Scoop/shims/nvim.exe"
+# alias rg="~/Scoop/shims/rg.exe" # Ripgrep
+# alias git-credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
+# alias credential-manager="~/AppData/Local/Programs/Git/mingw64/bin/git-credential-manager.exe"
+# alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
+# alias poetry="~/AppData/Roaming/pypoetry/venv/Scripts/poetry.exe"
+# alias dbt="./dbt.exe"
 
 
 tmux () {
@@ -140,10 +140,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-   zsh-autosuggestions
+   zsh-autosuggestions 
+   
    )
-
-plugins+=(zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
